@@ -34,9 +34,32 @@ type Author = {
 };
 
 const author: Author & User = {
-    age: 2,
-    books:['Livro 1'],
-    email:'jhon@doe.com',
-    name:'Jhon',
-    orders:[],
+  age: 2,
+  books: ["Livro 1"],
+  email: "jhon@doe.com",
+  name: "Jhon",
+  orders: [],
 };
+// Interfaces
+interface UserInterface {
+  readonly name: string;
+  email: string;
+}
+
+const emailUser: UserInterface = {
+  email: "felipe@gmail.com",
+  name: "Felipe",
+};
+
+interface AuthorInterface {
+  books: string[];
+}
+
+const newAthor: UserInterface & AuthorInterface = {
+  email: "author@gmail.com",
+  name: "Author",
+  books: [],
+};
+
+type Grade = number | string;
+const grade: Grade = 1;
