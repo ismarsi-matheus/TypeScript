@@ -1,7 +1,7 @@
 interface IPerson {
   id: number;
-//   name: string;
-//   age: number;
+  //   name: string;
+  //   age: number;
   sayMyName(): string; // mesma assinatura da classe
 }
 
@@ -17,6 +17,16 @@ class Person implements IPerson {
   }
 
   sayMyName(): string {
+    return this.name;
+  }
+}
+
+class Employee extends Person {
+  constructor(id: number, name: string, age: number) {
+    super(id, name, age);
+  }
+
+  whoIAm() {
     return this.name;
   }
 }
