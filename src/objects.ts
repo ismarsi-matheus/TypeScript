@@ -11,6 +11,7 @@ type User = {
   email: string;
   password?: string;
   orders: Order[];
+  register(): string;
 };
 
 const user: User = {
@@ -19,6 +20,9 @@ const user: User = {
   email: "jane@doe.com",
   password: "12345",
   orders: [{ productId: "1", price: 200 }],
+  register() {
+    return "a";
+  },
 };
 
 user.password;
@@ -39,16 +43,23 @@ const author: Author & User = {
   email: "jhon@doe.com",
   name: "Jhon",
   orders: [],
+  register() {
+    return "a";
+  },
 };
 // Interfaces
 interface UserInterface {
   readonly name: string;
   email: string;
+  login(): string;
 }
 
 const emailUser: UserInterface = {
   email: "felipe@gmail.com",
   name: "Felipe",
+  login() {
+    return "a";
+  },
 };
 
 interface AuthorInterface {
@@ -59,6 +70,9 @@ const newAthor: UserInterface & AuthorInterface = {
   email: "author@gmail.com",
   name: "Author",
   books: [],
+  login() {
+    return "a";
+  },
 };
 
 type Grade = number | string;
