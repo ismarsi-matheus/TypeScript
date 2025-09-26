@@ -14,18 +14,24 @@ const names = ["Matheus", "João", "Maria"];
 const person = ["Matheus", 5, true];
 // Lista de Tuplas
 const people = [
-    ["Matheus", 5],
-    ["João", 10],
-    ["Maria", 15]
+  ["Matheus", 5],
+  ["João", 10],
+  ["Maria", 15],
 ];
 // Intersections
-const produtId = '1';
+const produtId = "1";
 //  Enum
 var Direction;
 (function (Direction) {
-    Direction[Direction["Up"] = 1] = "Up";
-    Direction[Direction["Down"] = 2] = "Down";
+  Direction[(Direction["Up"] = 1)] = "Up";
+  Direction[(Direction["Down"] = 2)] = "Down";
+  Direction["Left"] = "Esquerda";
+  Direction["Right"] = "Direita";
 })(Direction || (Direction = {}));
-const direction = Direction.Up;
+const direction = Direction.Left;
+// Type Assertions
+const produtName = "boné";
+// let itemId = produtName as string;
+let itemId = produtName;
 console.log(direction);
 //# sourceMappingURL=index.js.map
